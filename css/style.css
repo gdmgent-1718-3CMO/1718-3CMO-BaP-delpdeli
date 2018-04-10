@@ -1,0 +1,1253 @@
+/*ALGEMEEN*/
+
+body {
+    background-color: white;
+}
+
+.logowoord {
+    width: 100px;
+    margin-left: 20px;
+}
+
+.naamlogo {
+    width: 150px;
+    margin-bottom: 50px;
+}
+
+.centered {
+    text-align: center;
+}
+
+.hr_onder {
+    width: 50px;
+    height: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    border: 0 none;
+    border-radius: 7px 7px 7px 7px;
+}
+
+.hr_wit {
+    background-color: white;
+}
+
+.hr_rood {
+    background-color: #F11442;
+}
+
+.hr_links {
+    float: left;
+}
+
+.mt {
+    padding-top: 25px;
+    margin-bottom: 20px;
+}
+
+
+/*scheef*/
+
+.wrap {
+    z-index: 1;
+    position: relative;
+}
+
+.wrap .scheef_een:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: visible;
+    width: 100%;
+    height: 100%;
+    background: #00C2CF;
+    z-index: -1;
+    -webkit-transform: skewY(-2deg);
+    -moz-transform: skewY(-2deg);
+    -ms-transform: skewY(-2deg);
+    -o-transform: skewY(-2deg);
+    transform: skewY(-2deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: initial;
+}
+
+.wrap .scheef_twee:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: visible;
+    width: 100%;
+    height: 100%;
+    background: #00C2CF;
+    z-index: -1;
+    -webkit-transform: skewY(+5deg);
+    -moz-transform: skewY(+5deg);
+    -ms-transform: skewY(+5deg);
+    -o-transform: skewY(+5deg);
+    transform: skewY(+2deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: initial;
+}
+
+
+/*wrap*/
+
+.wrap {
+    background: white;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    border-bottom: 1px solid #ddd;
+}
+
+.wrap p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: white;
+    width: 100%;
+    margin-left: 30px;
+    margin-right: 30px;
+    letter-spacing: 1px;
+    padding: 15px 30px 15px 15px;
+}
+
+.wrap h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 23px;
+    color: white;
+    padding-left: 20px;
+}
+
+
+/*NAVBAR*/
+
+
+/*sprite*/
+
+.logoicoon {
+    height: 117px;
+    width: 120px;
+    background-image: url('../img/logo_thefruittruck2.png');
+    background-repeat: no-repeat;
+}
+
+.logoicoon {
+    height: 60.7px;
+    width: 120px;
+    background-image: url('../img/logo_thefruittruck2.png');
+}
+
+.logoicoon:hover {
+    background-position: 0px -60.7px;
+}
+
+button:focus {
+    outline: none;
+}
+
+
+/*nav*/
+
+.navbar {
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    background: transparent;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.nav-item {
+    padding: 5px;
+    font-family: 'Bitter', serif;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.nav-item a {
+    color: black;
+}
+
+
+/* stroke */
+
+nav.stroke ul li a,
+nav.fill ul li a {
+    position: relative;
+}
+
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #EA5B0C;
+    height: 6px;
+    border-radius: 3px;
+}
+
+nav.stroke ul li a:hover:after {
+    width: 100%;
+}
+
+nav.fill ul li a {
+    transition: all 2s;
+}
+
+nav.fill ul li a:after {
+    text-align: left;
+    content: '.';
+    margin: 0;
+    opacity: 0;
+}
+
+nav.fill ul li a:hover:after {
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
+    opacity: 1;
+}
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+    transition: all .5s;
+}
+
+nav ul li a:hover {
+    color: #EA5B0C;
+}
+
+@media(max-width:990px) {
+    nav.stroke ul li a:hover:after {
+        width: 120px;
+    }
+    nav.stroke ul li a:after,
+    nav.fill ul li a:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-left: 0px;
+    }
+}
+
+
+/*KNOPPEN*/
+
+.knop {
+    background: #f11442;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 40px;
+    padding: 12px 24px;
+    white-space: nowrap;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.knop a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.knop {
+    transition: all 0.3s ease 0s;
+}
+
+.knop:hover {
+    background: #CE2F3F;
+    padding: 12px 44px;
+}
+
+.knop:active {
+    background: #f11442;
+}
+
+
+/*SLIDER*/
+
+.sliderimg {
+    width: 1900px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-inner {
+    height: 50%;
+}
+
+.tekstslider {
+    font-family: 'Bitter', serif;
+    font-size: 50px;
+    color: white;
+    text-shadow: 4px 4px 16px rgba(0, 0, 0, 1);
+}
+
+
+/*OVER*/
+
+#tekstover {
+    padding: 60px 20px 50px 0px;
+}
+
+.embed-responsive {
+    position: relative;
+    display: block;
+    height: 0;
+    margin-top: 120px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.embed-responsive .embed-responsive-item,
+.embed-responsive iframe,
+.embed-responsive embed,
+.embed-responsive object,
+.embed-responsive video {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.embed-responsive-16by9 {
+    padding-bottom: 56.25%;
+}
+
+.embed-responsive-4by3 {
+    padding-bottom: 75%;
+}
+
+
+/*ONZE WAARDEN*/
+
+.patroon_geel {
+    background-image: url(../img/aardbei_patroon.png);
+    background-repeat: repeat;
+    background-position: left top;
+}
+
+.titel {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    color: #F11442;
+    padding-top: 20px;
+    text-transform: uppercase;
+}
+
+.wit {
+    color: white;
+}
+
+.fotowaarden {
+    width: 300px;
+}
+
+.rood {
+    color: #F11442;
+}
+
+.blauw {
+    color: #00C2CF;
+}
+
+.oranje {
+    color: #EA5B0C;
+}
+
+.infowaarden b {
+    font-family: 'Bitter', serif;
+    font-size: 30px;
+}
+
+.infowaarden {
+    height: 200px;
+    background: #fff;
+    padding: 15px;
+    margin: 2px;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0px 0px 52px -2px rgba(0, 0, 0, 0.46);
+    -moz-box-shadow: 0px 0px 52px -2px rgba(0, 0, 0, 0.46);
+    box-shadow: 0px 0px 52px -2px rgba(0, 0, 0, 0.46);
+}
+
+
+/*ONS MENU*/
+
+.onsmenu {
+    padding-top: 10px;
+    padding-bottom: 70px;
+}
+
+.wrap .onsmenutekst {
+    color: black;
+}
+
+
+/*ZOEK ONS*/
+
+#fotofoodtruck {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.img-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.img-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.img-overlay:before {
+    content: ' ';
+    display: block;
+    height: 70%;
+}
+
+
+/*FOOTER*/
+
+.footer {
+    background-color: #2f2f2f;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.footer p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    line-height: 30px;
+    color: white;
+    margin: auto;
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.footer h4 {
+    font-family: 'Bitter', serif;
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+.footer i {
+    padding: 7px;
+}
+
+.footeritem a {
+    color: white;
+}
+
+.footeritem a:hover {
+    color: #EA5B0C;
+    text-decoration: none;
+}
+
+
+/*LOCATIES*/
+
+#headerlocaties {
+    background-image: url(../img/headerlocaties.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.headertitel {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    color: white;
+    padding-top: 20px;
+    text-transform: uppercase;
+    margin-top: 70px;
+}
+
+#map {
+    width: 550px;
+    height: 550px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.patroon_roze {
+    background-image: url(../img/kers_patroon.png);
+    background-repeat: repeat;
+    background-position: left top;
+}
+
+.fotostad {
+    margin-top: 50px;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 40px;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-box-shadow: 0px 0px 52px -2px rgba(0, 0, 0, 0.46);
+    -moz-box-shadow: 0px 0px 52px -2px rgba(0, 0, 0, 0.46);
+    box-shadow: 0px 0px 52px -2px rgba(0, 0, 0, 0.46);
+}
+
+.fotostad:hover {
+    -webkit-transform: scale(1.3) rotate(5deg);
+    transform: scale(1.3) rotate(5deg);
+}
+
+.speech-bubble h4 {
+    margin-top: 20px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    color: #D02F60;
+}
+
+.speech-bubble p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: #D02F60;
+}
+
+.speech-bubble {
+    position: relative;
+    height: 200px;
+    background: #ffffff;
+    padding: 10px;
+    margin: 2px;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0px 0px 52px -2px rgba(0, 0, 0, 0.46);
+    -moz-box-shadow: 0px 0px 52px -2px rgba(0, 0, 0, 0.46);
+    box-shadow: 0px 0px 52px -2px rgba(0, 0, 0, 0.46);
+}
+
+.speech-bubble:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 27px solid transparent;
+    border-bottom-color: #ffffff;
+    border-top: 0;
+    margin-left: -27px;
+    margin-top: -27px;
+}
+
+
+/*event*/
+
+.event {
+    padding: 50px;
+}
+
+.vinkje {
+    padding-right: 5px;
+}
+
+.wrap ul {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: white;
+    list-style-type: none;
+}
+
+.eventimg {
+    width: 550px;
+    margin-top: 50px;
+}
+
+
+/*ONS MENU*/
+
+#headermenu {
+    background-image: url(../img/headermenu.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.headertitel {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    color: white;
+    padding-top: 20px;
+    text-transform: uppercase;
+    margin-top: 70px;
+}
+
+.patroon_groen {
+    background-image: url(../img/appel_patroon.png);
+    background-repeat: repeat;
+    background-position: left top;
+}
+
+
+/*aanbod inhoud*/
+
+.aanbod {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.aanbod_inhoud {
+    max-width: 300px;
+    min-width: 300px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin: 10px auto;
+    -webkit-box-shadow: 0px 0px 52px -2px rgba(0, 0, 0, 0.46);
+    -moz-box-shadow: 0px 0px 52px -2px rgba(0, 0, 0, 0.46);
+    box-shadow: 0px 0px 52px -2px rgba(0, 0, 0, 0.46);
+}
+
+.aanbod_inhoud h3 {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 1.6em;
+}
+
+.aanbod_inhoud * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+.aanbod_inhoud img {
+    max-width: 100%;
+    vertical-align: top;
+    position: relative;
+}
+
+.aanbod_inhoud figcaption {
+    padding: 25px 20px 25px;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+
+.aanbod_inhoud .hover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    background-color: rgba(254, 212, 69, 0.75);
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+}
+
+.aanbod_inhoud a {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.aanbod_inhoud:hover .hover,
+.aanbod_inhoud.hover .hover {
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+    opacity: 1;
+}
+
+.aanbod_inhoud:hover figcaption {
+    opacity: 0;
+}
+
+
+/*smoothie*/
+
+.icoonfruit {
+    width: 25px;
+}
+
+.imgsmoothie {
+    width: 100%;
+    padding-top: 50px;
+}
+
+#section-smoothie {
+    margin-top: 50px;
+}
+
+#smoothie .carousel-inner img {
+    object-fit: contain;
+}
+
+.tabknop {
+    background: #f11442;
+    border: none;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 40px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    white-space: nowrap;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.tabknop a {
+    color: #fff;
+}
+
+#carouselnavigatie .nav-item a,
+#carouselnavigatie .nav-item a.active {
+    background: none !important;
+}
+
+#carouselnavigatie {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tabknop {
+    transition: all 0.3s ease 0s;
+    margin-bottom: 20px;
+}
+
+.tabknop:hover {
+    background: #CE2F3F;
+}
+
+.teksttab p {
+    margin-left: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+.teksttab h3 {
+    padding: 5px;
+    font-family: 'Bitter', serif;
+    font-size: 30px;
+    color: #FED445
+}
+
+@media(min-width:992px) {
+    #carouselnavigatie {
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+}
+
+
+/*sapjes*/
+
+.titelaanbod {
+    padding: 20px 5px 10px 5px;
+    font-family: 'Bitter', serif;
+    font-size: 30px;
+    color: white;
+}
+
+.imgaanbod {
+    display: inline-block;
+    border: 0;
+    position: relative;
+    -webkit-transition: all 400ms ease-in;
+    -webkit-transform: scale(1);
+    -ms-transition: all 400ms ease-in;
+    -ms-transform: scale(1);
+    -moz-transition: all 400ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 400ms ease-in;
+    transform: scale(1);
+    -webkit-box-shadow: 0px 0px 39px -5px rgba(39, 69, 71, 0.75);
+    -moz-box-shadow: 0px 0px 39px -5px rgba(39, 69, 71, 0.75);
+    box-shadow: 0px 0px 39px -5px rgba(39, 69, 71, 0.75);
+}
+
+.imgaanbod:hover {
+    -webkit-box-shadow: 0px 0px 39px -5px rgba(39, 69, 71, 0.75);
+    -moz-box-shadow: 0px 0px 39px -5px rgba(39, 69, 71, 0.75);
+    box-shadow: 0px 0px 39px -5px rgba(39, 69, 71, 0.75);
+    z-index: 2;
+    -webkit-transition: all 400ms ease-in;
+    -webkit-transform: scale(1.1);
+    -ms-transition: all 400ms ease-in;
+    -ms-transform: scale(1.1);
+    -moz-transition: all 400ms ease-in;
+    -moz-transform: scale(1.1);
+    transition: all 400ms ease-in;
+    transform: scale(1.1);
+}
+
+#sapjes {
+    margin-top: 20px;
+    padding: 50px;
+    padding-bottom: 80px;
+}
+
+
+/*fruitsalades*/
+
+#fruitsalades p {
+    margin-left: 0px;
+}
+
+#fruitsalades {
+    background-color: white;
+    padding: 50px;
+    -webkit-box-shadow: 0px 0px 52px -2px rgba(0, 0, 0, 0.46);
+    -moz-box-shadow: 0px 0px 52px -2px rgba(0, 0, 0, 0.46);
+    box-shadow: 0px 0px 52px -2px rgba(0, 0, 0, 0.46);
+}
+
+
+/*fruityoghurt*/
+
+#yoghurt {
+    margin-top: 20px;
+    padding: 50px;
+    padding-bottom: 80px;
+}
+
+
+/*CONTACT*/
+
+#headercontact {
+    background-image: url(../img/headercontact.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#contactformulier {
+    margin-top: 20px;
+    padding: 50px;
+    padding-bottom: 80px;
+}
+
+.form-control {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+}
+
+
+/*sociale media*/
+
+#gsm {
+    width: 350px;
+}
+
+.contacttekst {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: black;
+    padding-top: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+#socialemedia {
+    padding: 30px;
+}
+
+#socialemedia .col-lg-4 {
+    margin: 0;
+    padding: 15px;
+}
+
+#socialemedia .donker {
+    background-color: rgb(131, 182, 20);
+}
+
+#socialemedia .licht {
+    background-color: #94D706;
+}
+
+#socialemedia h4 {
+    color: #fff;
+}
+
+#socialemedia p {
+    color: #fff;
+}
+
+#socialemedia .ml {
+    font-family: 'Bitter', serif;
+    font-size: 17px;
+}
+
+#socialemedia i {
+    font-size: 70px;
+    color: #fff;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#socialemedia .licht i {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+#socialemedia .licht:hover i {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+#socialemedia .donker i {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+#socialemedia .donker:hover i {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+
+/*nieuwsbrief*/
+
+#mailnieuwsbrief {
+    width: 20%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.newsletter {
+    padding: 80px 0;
+}
+
+.newsletter form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#emailnieuwsbrief {
+    width: 70%;
+    margin: auto;
+}
+
+.newsletter #emailnieuwsbrief {
+    background-color: white;
+    color: black;
+    border: 2px solid #F11442;
+    height: 50px;
+    padding-left: 20px;
+    box-shadow: none !important;
+    margin-bottom: 10px;
+}
+
+.newsletter #emailnieuwsbrief:focus {
+    border: 2px solid #ce2f3f;
+}
+
+.newsletter input#emailnieuwsbrief:-webkit-input-placeholder {
+    color: #9D9D9C;
+    font-weight: normal;
+}
+
+.newsletter input #emailnieuwsbrief:-moz-placeholder {
+    color: #9D9D9C;
+}
+
+.newsletter input#emailnieuwsbrief:-ms-input-placeholder {
+    color: #9D9D9C;
+}
+
+
+/*CATERING*/
+
+#headercatering {
+    background-image: url(../img/headercatering.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+/*huur ons*/
+
+#huurons {
+    margin-top: 20px;
+    padding: 50px;
+    padding-bottom: 80px;
+}
+
+
+/*ANIMATIE*/
+
+#autoanimatie {
+    margin-top: 100px;
+}
+
+#autootje {
+    margin: 10% auto -25px;
+    position: relative;
+    width: 300px;
+    -webkit-animation: autootje 15s infinite;
+    animation: autootje 15s infinite;
+}
+
+#autootje img {
+    width: 100%;
+    animation: suspension 1s infinite;
+}
+
+#autootje .wiel {
+    background: url("../img/wiel.png") no-repeat center center;
+    background-size: 99% auto;
+    display: block;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    bottom: -5px;
+    -webkit-animation: spin 0.2s linear infinite;
+    animation: spin 0.2s linear infinite;
+}
+
+.wiel.links {
+    left: 32px;
+}
+
+.wiel.rechts {
+    right: 32px;
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(-360deg);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@-webkit-keyframes autootje {
+    50% {
+        -webkit-transform: translateX(10%);
+    }
+    70% {
+        -webkit-transform: translateX(-20%);
+    }
+    100% {
+        -webkit-transform: translateX(0%);
+    }
+}
+
+@keyframes autootje {
+    50% {
+        transform: translateX(10%);
+    }
+    70% {
+        transform: translateX(-20%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@-webkit-keyframes suspension {
+    0% {
+        -webkit-transform: translateY(1px);
+    }
+    50% {
+        -webkit-transform: translateY(3px);
+    }
+    100% {
+        -webkit-transform: translateY(1px);
+    }
+}
+
+@keyframes suspension {
+    0% {
+        transform: translateY(1px);
+    }
+    50% {
+        transform: translateY(3px);
+    }
+    100% {
+        transform: translateY(1px);
+    }
+}
+
+
+/*formules*/
+
+#formules {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+#formules .optie {
+    padding-bottom: 20px;
+}
+
+#formules h4 {
+    font-weight: 700;
+}
+
+span.titelformule {
+    font-family: 'Bitter', serif;
+    font-size: 25px;
+}
+
+.formule-optie {
+    -webkit-box-shadow: 0px 0px 52px -2px rgba(0, 0, 0, 0.46);
+    -moz-box-shadow: 0px 0px 52px -2px rgba(0, 0, 0, 0.46);
+    box-shadow: 0px 0px 52px -2px rgba(0, 0, 0, 0.46);
+}
+
+.formule-optie p {
+    font-size: 15px;
+}
+
+.formule-optie .formule-top {
+    position: relative;
+    background: #222;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 40px 20px 30px 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.formule-optie .formule-nummer {
+    text-transform: uppercase;
+    display: block;
+    font-size: 25px;
+    letter-spacing: 8px;
+}
+
+.formule-optie ul {
+    list-style: none;
+    margin: 0;
+    background: #eee;
+    text-align: center;
+    padding-left: 0px;
+}
+
+.formule-optie ul li {
+    border-bottom: solid 1px #e1e1e1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.formule-optie .formule-kies {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 10px;
+    color: white;
+    background: #94D706;
+}
+
+.formule-optie .formule-kies:hover {
+    background: #F11442;
+    text-decoration: none;
+}
+
+
+/*offerte*/
+
+#achtergrondofferte {
+    background-image: url(../img/achtergrondofferte.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#offerte {
+    padding: 80px 0;
+}
+
+#offerte form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#offerte label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    padding-bottom: 10px;
+}
+
+#offerte .form-control {
+    background-color: white;
+    color: black;
+    border: 2px solid #F11442;
+    height: 50px;
+    padding-left: 20px;
+    box-shadow: none !important;
+    margin-bottom: 10px;
+}
+
+#offerte textarea#message.form-control {
+    height: 200px;
+}
+
+#offerte .form-control:focus {
+    border: 2px solid #ce2f3f;
+}
